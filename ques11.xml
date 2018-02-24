@@ -1,0 +1,43 @@
+<!--11.	Write a question paper as an XML file (question.xml say). The DTD is given below:
+
+<!ELEMENT question-paper (question*)>
+<!ELEMENT question (text, optionA, optionB, optionC, optionD, answer)>
+<!ELEMENT text (#PCDATA)>
+<!ELEMENT optionA (#PCDATA)>
+<!ELEMENT optionB (#PCDATA)>
+<!ELEMENT optionC (#PCDATA)>
+<!ELEMENT optionD (#PCDATA)>
+<!ELEMENT answer (#PCDATA)>
+
+<!ATTLIST question no CDATA #REQUIRED>
+<!ATTLIST answer value  (optionA|optionB|optionC|optionD) #REQUIRED>
+
+Now, validate you XML file against this DTD-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE question-paper [
+
+<!ELEMENT question-paper (question*)>
+<!ELEMENT question (text, optionA, optionB, optionC, optionD, answer)>
+<!ELEMENT text (#PCDATA)>
+<!ELEMENT optionA (#PCDATA)>
+<!ELEMENT optionB (#PCDATA)>
+<!ELEMENT optionC (#PCDATA)>
+<!ELEMENT optionD (#PCDATA)>
+<!ELEMENT answer (#PCDATA)>
+
+<!ATTLIST question no CDATA #REQUIRED>
+<!ATTLIST answer value  (optionA|optionB|optionC|optionD) #REQUIRED>
+
+]>
+
+<question-paper>
+	<question no="1">
+		<text>What does XML stand for?</text>
+		<optionA>X-Markup Language</optionA>
+		<optionB>eXtensible Markup Language</optionB>
+		<optionC>eXtra Modern Link</optionC>
+		<optionD>eXample Markup Language</optionD>
+		<answer value="optionB"/>
+	</question>
+</question-paper>
