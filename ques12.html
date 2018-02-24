@@ -1,0 +1,22 @@
+<!--12.	Use HTML5 canvas and <SVG> tag to create following picture. Create one and use transformation to create others.-->
+
+<!DOCTYPE html>
+<html>
+<style>
+ellipse{
+  getElementById('as');
+  a.transform: rotate(60deg);
+  a.transform-origin: 50% 50%;
+}	
+</style>
+<body>
+
+<svg height="500" width="500">
+  <ellipse cx="200" cy="200" rx="80" ry="25" style="fill:transparent;stroke:blue;stroke-width:1" />
+  <ellipse id="as" cx="200" cy="200" rx="80" ry="25" style="fill:transparent;stroke:blue;stroke-width:1" transform="rotate(60, 200, 200)" />
+  <ellipse id="as" cx="200" cy="200" rx="80" ry="25" style="fill:transparent;stroke:blue;stroke-width:1" transform="rotate(-60, 200, 200)" />
+  Sorry, your browser does not support inline SVG.  
+</svg>
+
+</body>
+</html>
