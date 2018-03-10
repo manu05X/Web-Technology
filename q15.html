@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<script>
+	  if (window.Worker) { 
+		var fw = new Worker("q15.js");
+		fw.onmessage = function(e) {
+		  document.getElementById("result").innerHTML = e.data;
+		};
+		fw.postMessage(6); 
+	  } else alert('Your browser does not support Worker');
+    </script>
+  </head>  
+  <body>
+    <!--<script>
+	  if (window.Worker) { 
+		var fw = new Worker("demo.js");
+		fw.onmessage = function(e) {
+		  document.getElementById("result").innerHTML = e.data;
+		};
+		fw.postMessage(3); 
+	  } else alert('Your browser does not support Worker');
+    </script>-->
+    <span id="result"></span> 
+  </body>
+</html>
